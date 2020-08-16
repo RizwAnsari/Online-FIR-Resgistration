@@ -1,0 +1,101 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Main, App_Web_hkj1vazb" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--<link href="~/StyleSheet/navigationbar.css" rel="stylesheet" type="text/css" />-->
+    <link href="navigationbar.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style type="text/css">
+        .style1
+        {
+            width: 174px;
+        }
+        footer{
+	        position: fixed;
+	        width: 100%;
+	        height: 30px;
+	        background: #505050;
+	        bottom: 0;
+	        text-align: center;
+        }
+        .foot{
+	        margin: 0;
+	        padding: 0;
+	        line-height: 30px;
+	        color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <table width="100%" border="0">
+                    <tr style="width: 100%;background: #000033;opacity: 0.5;height: 30px;">
+                        <td align="center" class="style1" colspan="2">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FFFFFF" align="center" class="style1">
+                            <img src="Images/Logo/seclogo.jpg" width="218px" height="162px" alt=""/>
+                        </td>
+                        <td bgcolor="#FFFFFF" align="center">
+                            <img src="Images/Logo/mainlogo.png"alt=""/>
+                        </td>
+                    </tr>
+                </table>
+            <div class="nav">
+                <ul>
+			        <li><a href="Home.aspx">HOME</a></li>
+			        <li><a href="#">SERVICES</a>
+                        <ul>
+						    <li><a href='FIR.aspx'>FIR</a></li>
+						    <li><a href='Complain.aspx'>COMPLAIN</a></li>
+					    </ul>
+                    </li>
+			        <li><a href="Login.aspx">STATUS</a></li>
+			        <li><a href="Feedback.aspx">FEEDBACK</a></li>
+			        <li><a href="AboutUs.aspx">ABOUT US</a></li>
+                    <li><a href="ContactUs.aspx">CONTACT US</a></li>
+			        <div id="loginPageStatus" runat="server"><li><a href="Register.aspx">REGISTER</a></li></div>
+		        </ul>
+	        </div>
+            <div>
+                <table width="100%" cellpadding="0px" cellspacing="0px">
+                    <tr style="color: White; background-color: White">
+                        <td>
+                            
+                        </td>
+                        <td width="55%">
+                           <asp:LinkButton ID="LBtnLogout" runat="server" ForeColor="White" 
+                                NavigateUrl="Login.aspx" Font-Bold="True" Font-Names="Arial" Font-Size="Large" 
+                                onclick="LBtnLogout_Click" BorderColor="White" BorderStyle="Outset" 
+                                   Width="100px" CausesValidation="False" 
+                                style="position: absolute;top: 30%;left: 85%;">Logout</asp:LinkButton>  
+                        </td>
+                        <td align="right">
+                                <!--<asp:Label ID="Label1" runat="server" Visible="False" Font-Bold="False" 
+                                    Font-Size="X-Large" ForeColor="Red" Text="Greeting"></asp:Label>!-->
+                        </td>
+                    </tr>
+                </table>
+            </div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+
+             <table width="100%" cellpadding="0px" cellspacing="0px">
+                <br /><br /><br />
+                
+             </table>       
+    </div>
+    </form>
+    <footer>
+		  <b><p class="foot" align="center">&copy 2019 Online FIR Registration All Rights Reserved.</p></b>
+	</footer>
+</body>
+</html>

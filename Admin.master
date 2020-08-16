@@ -1,0 +1,88 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="Admin, App_Web_hkj1vazb" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="navigationbar1.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon-admin.ico" type="image/x-icon" />
+    <style type="text/css">
+        .style1
+        {
+            width: 174px;
+        }
+        footer{
+	        position: fixed;
+	        width: 100%;
+	        height: 30px;
+	        background: #505050;
+	        bottom: 0;
+	        text-align: center;
+        }
+        .foot{
+	        margin: 0;
+	        padding: 0;
+	        line-height: 30px;
+	        color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <table width="100%" border="0">
+                    <tr style="width: 100%;background: #000033;opacity: 0.5;height: 30px;">
+                        <td align="center" class="style1" colspan="2">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#FFFFFF" align="center" class="style1">
+                            <img src="Images/Logo/seclogo.jpg" width="218px" height="162px" alt=""/>
+                        </td>
+                        <td bgcolor="#FFFFFF" align="center">
+                            <img src="Images/Logo/mainlogo.png"alt=""/>
+                        </td>
+                    </tr>
+                </table>
+            <div class="nav">
+                <ul>
+			        <li><a href="Users.aspx">USERS</a></li>
+			        <li><a href="UpdateComplainStatus.aspx">UPDATE STATUS</a></li>
+                    <li><a href="AudioDetails.aspx">AUDIO DETAILS </a></li>
+			        <li><a href="ViewFeedback.aspx">VIEW FEEDBACK </a></li>
+			        <li><a href="Report.aspx">REPORTS</a></li>
+		        </ul>
+	        </div>
+            <div>
+                <table width="100%" cellpadding="0px" cellspacing="0px">
+                    <tr style="color: White; background-color: White">
+                        <td width="58%" align="right">
+                           <asp:LinkButton ID="LBtnLogout" runat="server" ForeColor="Black" 
+                                NavigateUrl="Login.aspx" Font-Bold="True" Font-Names="Arial" Font-Size="Medium" 
+                                onclick="LBtnLogout_Click" BorderColor="White" BorderStyle="Outset" 
+                                   Width="100px" CausesValidation="False" style="position: absolute;top: 30%;left: 85%;">Logout</asp:LinkButton>  
+                        </td>
+                        <td align="right">
+                                
+                        </td>
+                    </tr>
+                </table>
+            </div>            
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+             <table width="100%" cellpadding="0px" cellspacing="0px">
+                <br />
+             </table>       
+                
+                
+        </div>
+    </form>
+    <footer>
+		  <b><p class="foot" align="center">&copy 2019 Online FIR Registration All Rights Reserved.</p></b>
+	</footer>
+</body>
+</html>

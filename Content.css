@@ -1,0 +1,41 @@
+﻿body 
+{
+    margin: 0;
+    padding: 0;
+    font-family: Sans-Serif;
+}
+.box
+{
+    position: absolute;
+    top: 52.5%;
+    left: 52.5%;
+    transform: translate(-50%,-20%);
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    display: flex;
+    transition: .5s;
+}
+.box:hover
+{
+    box-shadow: 0 15px 30px rgba(0,0,0,.5);
+}
+.box .content
+{
+    padding-left: 0px;
+}
+.box .content h2
+{
+    margin: 0;
+    padding-left: 0;
+    color: #000;
+    font-size: 22px;
+}
+.box .content p
+{
+    margin: 0;
+    padding: 10px 0 0;
+    text-align: justify;
+}
